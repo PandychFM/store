@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { APP_NAME } from "@/lib/constants"
 
 
-const categories = ['диваны', 'кровати', 'шкафы', 'тумбы', 'стеллажи']
+const categories = ['диваны', 'кровати', 'шкафы', 'тумбы', 'стеллажи', 'матрасы']
 
 export default async function Search() {
   return (
