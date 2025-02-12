@@ -45,7 +45,7 @@ const productSchema = new Schema<IProduct>(
     },
     tags: { type: [String], default: ['новое прибытие'] },
     colors: { type: [String], default: ['Белый', 'Красный', 'Чёрный'] },
-    // sizes: { type: [String], default: ['S', 'M', 'L'] },
+    sizes: { type: [String], default: ['S', 'M', 'L'] },
     avgRating: {
       type: Number,
       required: true,

@@ -25,7 +25,7 @@ const products: IProductInput[] = [
     countInStock: 11,
     description:
       'Made with chemicals safer for human health and the environment',
-    // sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: ['Green', 'Red', 'Black'],
 
     reviews: [],
@@ -59,7 +59,7 @@ const products: IProductInput[] = [
     description:
       'Made with sustainably sourced USA grown cotton; Shoulder-to-shoulder tape; double-needle coverstitched front neck; Set-in sleeves; Rib cuffs with concealed seams; Seamless body for a wide printing area',
 
-    // sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: ['Yellow', 'Red', 'Black'],
 
     reviews: [],
@@ -87,7 +87,7 @@ const products: IProductInput[] = [
     countInStock: 13,
     description:
       'The Jerzees long sleeve t-shirt is made with dri-power technology that wicks away moisture to keep you cool and dry throughout your day. We also included a rib collar and cuffs for added durability, and a lay-flat collar for comfort. If you are looking for a versatile shirt that you can wear throughout the transitioning seasons, then look no further.',
-    // sizes: ['XL', 'XXL'],
+    sizes: ['XL', 'XXL'],
     colors: ['Green', 'White'],
 
     reviews: [],
@@ -117,7 +117,7 @@ const products: IProductInput[] = [
     countInStock: 14,
     description:
       'Elevate your outfit with this soft long sleeve t shirt men. This full sleeves tee is the ultimate upgrade from your regular cotton t-shirt. ',
-    // sizes: ['XL', 'XXL'],
+    sizes: ['XL', 'XXL'],
     colors: ['Yellow', 'White'],
 
     reviews: [],
@@ -147,7 +147,7 @@ const products: IProductInput[] = [
     countInStock: 15,
     description:
       "Slim Fit Design:Men's Muscle Slim Fit Button Henley Shirts are designed to fit snugly against your body, accentuating your muscles and creating a sleek silhouette that's perfect for any occasion. ",
-    // sizes: ['XL', 'XXL'],
+    sizes: ['XL', 'XXL'],
     colors: ['Green', 'Yellow'],
 
     reviews: [],
@@ -175,7 +175,7 @@ const products: IProductInput[] = [
     numSales: 56,
     description:
       'Heavyweight cotton (Heathers are 60% cotton/40% polyester; Pebblestone is 75% cotton/25% polyester)',
-    // sizes: ['XL', 'XXL'],
+    sizes: ['XL', 'XXL'],
     colors: ['Grey', 'White'],
 
     reviews: [],
@@ -204,7 +204,7 @@ const products: IProductInput[] = [
     numSales: 21,
     description:
       'Silver Jeans Co. Jace Slim Fit Bootcut Jeans - Consider Jace a modern cowboy jean. It sits below the waist and features a slim fit through the hip and thigh. Finished with an 18” bootcut leg opening that complements the slimmer silhouette while still fitting over boots',
-    // sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
+    sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
     colors: ['Blue', 'Grey'],
 
     reviews: [],
@@ -234,7 +234,7 @@ const products: IProductInput[] = [
     numSales: 54,
     description:
       'A veritable classic, this 505 is made to have a comfortable look and style.',
-    // sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
+    sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
     colors: ['Blue', 'Grey'],
 
     reviews: [],
@@ -262,7 +262,7 @@ const products: IProductInput[] = [
     numSales: 54,
     description:
       'These classic 5-pocket straight-fit jeans are crafted with a bit of stretch for additional comfort and to help maintain their shape',
-    // sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
+    sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
     colors: ['Grey', 'Blue'],
 
     reviews: [],
@@ -292,7 +292,7 @@ const products: IProductInput[] = [
     numSales: 53,
     description:
       'Stretch recycled denim jeans in an authentic and sanded wash blue. Features a comfortable low-rise waist with a relaxed fit at the leg. The distressed look gives these jeans an effortlessly worn-in feel. The eco-friendly logo patch in tan and red is at the back waistband. The signature maple leaf graphic is debossed at the zip-fly.',
-    // sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
+    sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
     colors: ['Blue', 'Grey'],
 
     reviews: [],
@@ -320,7 +320,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Relaxed work jean with traditional carpenter-style pockets and logo patch at back pockets',
-    // sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
+    sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
     colors: ['Blue', 'Grey'],
 
     reviews: [],
@@ -348,7 +348,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Designed with a functional fit in mind, these jeans are made to stack over your favorite pair of boots. Constructed with a slim fit in the waist, seat, and thigh, this jean is made for both function and comfort for long days in the saddle.',
-    // sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
+    sizes: ['30Wx30L', '34Wx30L', '36Wx30L'],
     colors: ['Blue', 'Grey'],
 
     reviews: [],
@@ -377,7 +377,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Casing: Case made of stainless steel Case shape: round Case colour: silver Glass: Hardlex Clasp type: Fold over clasp with safety',
-    // sizes: [],
+    sizes: [],
     colors: [],
 
     reviews: [],
@@ -407,7 +407,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Seiko 5 Sports Collection Inspired by vintage field/aviator style: Automatic with manual winding capability',
-    // sizes: [],
+    sizes: [],
     colors: [],
 
     reviews: [],
@@ -437,7 +437,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'The Casio range is growing with this model  MWA-100H-1AVEF. Sporting a stainless steel case with a brushed finish, it will easily withstand all the shocks of everyday life.',
-    // sizes: [],
+    sizes: [],
     colors: [],
 
     reviews: [],
@@ -467,7 +467,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'The new MTPVD01D-7EV is a classic 50 meter water resistant stainless steel watch now updated with a white dial. This elegant 3 hand, date display timepiece is perfect for any setting.',
-    // sizes: [],
+    sizes: [],
     colors: [],
 
     reviews: [],
@@ -495,7 +495,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Chronograph watch featuring silver- and blue-tone case, blue sunray dial, and silver-tone Roman numeral indices',
-    // sizes: [],
+    sizes: [],
     colors: ['Blue', 'Black', 'Sliver'],
 
     reviews: [],
@@ -523,7 +523,7 @@ const products: IProductInput[] = [
     numSales: 49,
     description:
       'In masculine black-on-black, our industrial-inspired Machine watch will add a fresh, modern touch to your casual look. This Machine watch also features a three hand movement on a stainless steel bracelet.',
-    // sizes: [],
+    sizes: [],
     colors: ['Brown', 'Sliver', 'Black'],
 
     reviews: [],
@@ -552,7 +552,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Cloudfoam Comfort sockliner is ultra-soft and plush, with two layers of cushioning topped with soft, breathable mesh',
-    // sizes: ['8', '9', '10'],
+    sizes: ['8', '9', '10'],
     colors: ['White', 'Black', 'Grey'],
 
     reviews: [],
@@ -582,7 +582,7 @@ const products: IProductInput[] = [
     numSales: 50,
     description:
       'Cloudfoam Comfort sockliner is ultra-soft and plush, with two layers of cushioning topped with soft, breathable mesh',
-    // sizes: ['8', '9', '10'],
+    sizes: ['8', '9', '10'],
     colors: ['Beige', 'Black', 'Grey'],
 
     reviews: [],
@@ -612,7 +612,7 @@ const products: IProductInput[] = [
     numSales: 72,
     description:
       'Step into easy-wearing comfort with Skechers Hands Free Slip-ins™: Summits - High Range. Along with our Exclusive Heel Pillow™ holds your foot securely in place, this vegan style features a unique pop-up Skechers Slip-ins™ molded heel panel, a mesh upper with fixed laces',
-    // sizes: ['8', '9', '10'],
+    sizes: ['8', '9', '10'],
     colors: ['Navy', 'Black', 'Grey'],
 
     reviews: [],
@@ -642,7 +642,7 @@ const products: IProductInput[] = [
     numSales: 72,
     description:
       'Design: Mesh vamp, ventilation. Sole anti-slip groove design, shock absorption and anti-slip. The inside of the shoe is wide and soft, bringing you a good comfortable experience',
-    // sizes: ['8', '9', '10', '11', '12'],
+    sizes: ['8', '9', '10', '11', '12'],
     colors: ['Brown', 'Black', 'Grey'],
 
     reviews: [],
@@ -670,7 +670,7 @@ const products: IProductInput[] = [
     numSales: 64,
     description:
       "At least 50% of the shoe's main upper material is made with recycled content to reduce waste and carbon emissions",
-    // sizes: ['8', '9', '10', '11'],
+    sizes: ['8', '9', '10', '11'],
     colors: ['Blue', 'Black', 'Grey'],
 
     reviews: [],
@@ -700,7 +700,7 @@ const products: IProductInput[] = [
     numSales: 48,
     description:
       'Cloudfoam Comfort sockliner is ultra-soft and plush, with two layers of cushioning topped with soft, breathable mesh',
-    // sizes: ['8', '9', '10', '11'],
+    sizes: ['8', '9', '10', '11'],
     colors: ['Green', 'Black', 'Grey'],
 
     reviews: [],

@@ -27,7 +27,7 @@ const Price = (field: string) =>
         .int()
         .nonnegative('количество на складе должно быть неотрицательным числом'),
       tags: z.array(z.string()).default([]),
-      // sizes: z.array(z.string()).default([]),
+      sizes: z.array(z.string()).default([]),
       colors: z.array(z.string()).default([]),
       avgRating: z.coerce
         .number()
