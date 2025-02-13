@@ -1,5 +1,6 @@
 import BrowsingHistoryList from "@/components/shared/browsing-history-list";
 import AddToBrowsingHistory from "@/components/shared/product/add-to-browsing-history";
+import AddToCart from "@/components/shared/product/add-to-cart";
 import ProductGallery from "@/components/shared/product/product-gallery";
 import ProductPrice from "@/components/shared/product/product-price";
 import ProductSlider from "@/components/shared/product/product-slider";
@@ -11,6 +12,7 @@ import {
   getProductsBySlug,
   getRelatedProductsByCategory,
 } from "@/lib/actions/product-actions";
+import { generateId, round2 } from "@/lib/utils";
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
@@ -99,7 +101,7 @@ export default async function ProductDetails(props: {
                 <ProductPrice price={product.price} />
 
                 {product.countInStock > 0 && product.countInStock <= 3 && (
-                  <div className="text-destructive font-bold">  
+                  <div className="text-destructive font-bold">
                     {`Только ${product.countInStock} осталось на складе - заказывайте в ближайшее время`}
                   </div>
                 )}
@@ -107,6 +109,25 @@ export default async function ProductDetails(props: {
                   <div className="text-green-700 text-xl">В наличии</div>
                 ) : (
                   <div className="text-destructive text-xl">Нет в наличии</div>
+                )}
+                {product.countInStock !== 0 && (
+                  <div className="flex justify-center items-center">
+                    <AddToCart
+                      item={{
+                        clientId: generateId(),
+                        product: product._id,
+                        countInStock: product.countInStock,
+                        name: product.name,
+                        slug: product.slug,
+                        category: product.category,
+                        price: round2(product.price),
+                        quantity: 1,
+                        image: product.images[0],
+                        size: size || product.sizes[0],
+                        color: color || product.colors[0],
+                      }}
+                    />
+                  </div>
                 )}
               </CardContent>
             </Card>
@@ -118,7 +139,7 @@ export default async function ProductDetails(props: {
         <ProductSlider
           products={relatedProducts.data}
           title={`Бестселлерами являются ${product.category}`}
-        />          
+        />
       </section>
       <section>
         <BrowsingHistoryList className="mt-10" />

@@ -4,7 +4,7 @@ import { cn, formatCurrency } from "@/lib/utils"
 
 const ProductPrice = ({
   price,
-  className,
+  className, // Теперь это string | undefined
   listPrice = 0,
   isDeal = false,
   forListing = true,
@@ -13,7 +13,7 @@ const ProductPrice = ({
   price: number
   isDeal?: boolean
   listPrice?: number
-  className?: boolean
+  className?: string  // Было boolean | undefined, исправлено на string | undefined
   forListing?: boolean
   plain?: boolean
 }) => {

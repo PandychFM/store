@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { formatNumberWithDecimal } from "./utils";
+// import Product from "./db/models/product.models";
 
 // Common
 const Price = (field: string) =>
@@ -45,4 +46,39 @@ const Price = (field: string) =>
         .number()
         .int()
         .nonnegative('Количество продаж должно быть неотрицательным числом'),
+    })
+
+    // Order Item
+    export const OrderItemSchema = z.object({
+      clientId: z.string().min(1, 'Требуется clientId'),
+      product: z.string().min(1, 'Требуется товар'),
+      name: z.string().min(1, 'Требуется название'),
+      slug: z.string().min(1, 'Требуется slug'),
+      category: z.string().min(1, 'Требуется категория'),
+      quantity: z
+        .number()
+        .int()
+        .nonnegative('Величина должна быть неотрицательным числом'),
+      countInStock: z
+        .number()
+        .int()
+        .nonnegative('Quantity must be a non-negative number'),
+      image: z.string().min(1, 'Требуется изображение'),
+      price: Price('Цена'),
+      size: z.string().optional(),
+      color: z.string().optional(),
+    })
+
+    export const CartSchema = z.object({
+      items: z
+        .array(OrderItemSchema)
+        .min(1, 'Заказ должен содержать хотя бы один товар'),
+        itemsPrice: z.number(),
+
+        taxPrice: z.optional(z.number()),
+        shippingPrice: z.optional(z.number()),
+        totlaPrice: z.number(),
+        paymentMethod: z.optional(z.string()),
+        deliveryDateIndex: z.optional(z.number()),
+        expectedDelivaryDate: z.optional(z.date())
     })
