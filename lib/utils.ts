@@ -15,7 +15,8 @@ export const toSlug = (text: string): string =>
     .toLocaleLowerCase()
     .replace(/[^\w\s-]+/g, '')
     .replace(/\s+/g, '-')
-    .replace(/^-+|-+$/g, '');
+    .replace(/^-+|-+$/g, '')
+    .replace(/-+/g, '-')
 
 const CUURENCY_FORMATTER = new Intl.NumberFormat('ru-RU', {
   currency: 'RUB',
