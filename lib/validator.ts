@@ -82,3 +82,36 @@ const Price = (field: string) =>
         deliveryDateIndex: z.optional(z.number()),
         expectedDelivaryDate: z.optional(z.date())
     })
+
+// USER
+const UserName = z
+  .string()
+  .min(2, { message: 'Имя пользователя должно содержать не менее 2 символов' })
+  .max(50, { message: 'Длина имени пользователя должна составлять не более 30 символов' })
+const Email = z.string().min(1, 'Требуется электронная почта').email('Адрес электронной почты недействителен')
+const Password = z.string().min(3, 'Пароль должен содержать не менее 3 символов')
+const UserRole = z.string().min(1, 'требуется роль')
+
+export const UserInputSchema = z.object({
+  name: UserName,
+  email: Email,
+  image: z.string().optional(),
+  emailVerified: z.boolean(),
+  role: UserRole,
+  password: Password,
+  paymentMethod: z.string().min(1, 'Требуется способ оплаты'),
+  address: z.object({
+    fullName: z.string().min(1, 'Требуется полное имя'),
+    street: z.string().min(1, 'Требуется улица'),
+    city: z.string().min(1, 'Требуется город'),
+    province: z.string().min(1, 'Требуется провинция'),
+    postalCode: z.string().min(1, 'Требуется указать почтовый индекс'),
+    country: z.string().min(1, 'Требуется страна'),
+    phone: z.string().min(1, 'Требуется указать номер телефона'),
+  }),
+})
+
+export const UserSignInSchema = z.object({
+  email: Email,
+  password: Password,
+})
