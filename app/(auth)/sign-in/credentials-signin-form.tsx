@@ -5,7 +5,6 @@ import { IUserSignIn } from "@/types"
 import { redirect, useSearchParams } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
-import { signInWithCredetials } from "@/lib/actions/user.actions"
 import { isRedirectError } from "next/dist/client/components/redirect-error"
 import { toast } from "@/hooks/use-toast"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -13,6 +12,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { APP_NAME } from "@/lib/constants"
 import Link from "next/link"
+import { signInWithCredentials } from "@/lib/actions/user.actions"
 
 const signInDefaultValues =
   process.env.NODE_ENV === 'development'
@@ -38,7 +38,7 @@ export default function CredentialSignInForm() {
 
   const onSubmit = async (data: IUserSignIn) => {
     try {
-      await signInWithCredetials({
+      await signInWithCredentials({
         email: data.email,
         password: data.password,
       })
