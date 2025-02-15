@@ -11,3 +11,52 @@ export const PAGE_SIZE = Number(process.env.PAGE_SIZE || 9)
 export const FREE_SHIPPING_MIN_PRICE = Number(
   process.env.FREE_SHIPPING_MIN_PRICE || 35
 )
+
+export const AVAILABLE_PAYMENT_METHODS = [
+  {
+    name: 'PayPal',
+    commission: 0,
+    isDefault: true,
+  },
+  {
+    name: 'Stripe',
+    commission: 0,
+    isDefault: true,
+  },
+  {
+    name: 'Наложенный платеж',
+    commission: 0,
+    isDefault: true,
+  }
+]
+export const DEFAULT_PAYMENT_METHOD = 
+  process.env.DEFAULT_PAYMENT_METHOD || 'PayPal'
+
+  export interface DeliveryDateOption {
+    name: string;
+    daysToDeliver: number;
+    shippingPrice: number;
+    freeShippingMinPrice: number;
+  }
+  
+  export const AVAILABLE_DELIVERY_DATES: DeliveryDateOption[] = [
+    {
+      name: "Завтра",
+      daysToDeliver: 1,
+      shippingPrice: 12.9,
+      freeShippingMinPrice: 0,
+    },
+    {
+      name: "Следующие три дня",
+      daysToDeliver: 3,
+      shippingPrice: 6.9,
+      freeShippingMinPrice: 0,
+    },
+    {
+      name: "Следующие 5 дней",
+      daysToDeliver: 5,
+      shippingPrice: 4.9,
+      freeShippingMinPrice: 35,
+    },
+  ];
+  

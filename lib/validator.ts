@@ -69,19 +69,33 @@ const Price = (field: string) =>
       color: z.string().optional(),
     })
 
-    export const CartSchema = z.object({
-      items: z
-        .array(OrderItemSchema)
-        .min(1, 'Заказ должен содержать хотя бы один товар'),
-        itemsPrice: z.number(),
 
-        taxPrice: z.optional(z.number()),
-        shippingPrice: z.optional(z.number()),
-        totlaPrice: z.number(),
-        paymentMethod: z.optional(z.string()),
-        deliveryDateIndex: z.optional(z.number()),
-        expectedDelivaryDate: z.optional(z.date())
-    })
+
+// Cart
+export const ShippingAddressSchema = z.object({
+  fullName: z.string().min(1, 'Требуется полное имя'),
+  street: z.string().min(1, 'Требуется указать адрес'),
+  city: z.string().min(1, 'Требуется город'),
+  postalCode: z.string().min(1, 'Требуется указать почтовый индекс'),
+  province: z.string().min(1, 'Требуется провинция'),
+  phone: z.string().min(1, 'Требуется указать номер телефона'),
+  country: z.string().min(1, 'Требуется страна'),
+})
+
+export const CartSchema = z.object({
+  items: z
+    .array(OrderItemSchema)
+    .min(1, 'Заказ должен содержать хотя бы один товар'),
+    itemsPrice: z.number(),
+
+    taxPrice: z.optional(z.number()),
+    shippingPrice: z.optional(z.number()),
+    totalPrice: z.number(),
+    paymentMethod: z.optional(z.string()),
+    deliveryDateIndex: z.optional(z.number()),
+    expectedDelivaryDate: z.optional(z.date()),
+    shippingAddress: z.optional(ShippingAddressSchema),
+})
 
 // USER
 const UserName = z
