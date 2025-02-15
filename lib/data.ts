@@ -51,7 +51,7 @@ const users: IUserInput[] = [
       country: 'USA',
       phone: '123-456-7890',
     },
-    paymentMethod: 'PayPal',
+    paymentMethod: 'Stripe',
     emailVerified: false,
   },
   {
@@ -85,7 +85,7 @@ const users: IUserInput[] = [
       country: 'USA',
       phone: '123-456-7890',
     },
-    paymentMethod: 'PayPal',
+    paymentMethod: 'Stripe',
     emailVerified: false,
   },
   {
@@ -153,7 +153,7 @@ const users: IUserInput[] = [
       country: 'USA',
       phone: '123-456-7890',
     },
-    paymentMethod: 'PayPal',
+    paymentMethod: 'Striope',
     emailVerified: false,
   },
   {
@@ -204,7 +204,7 @@ const users: IUserInput[] = [
       country: 'USA',
       phone: '123-456-7890',
     },
-    paymentMethod: 'PayPal',
+    paymentMethod: 'Stripe',
     emailVerified: false,
   },
   {
@@ -255,7 +255,7 @@ const users: IUserInput[] = [
       country: 'USA',
       phone: '123-456-7890',
     },
-    paymentMethod: 'PayPal',
+    paymentMethod: 'Stripe',
     emailVerified: false,
   },
 ]

@@ -5,7 +5,7 @@ import { AVAILABLE_DELIVERY_DATES } from "../constants";
 import { connectToDatabase } from "../db";
 import { auth } from "@/auth";
 import { OrderInputSchema } from "../validator";
-import Order from "../db/models/order.model";
+import Order, { IOrder } from "../db/models/order.model";
 
 
 export const createOrder = async (clientSideCart: Cart) => {
@@ -98,3 +98,9 @@ export const calcDeliveryDateAndPrice = async ({
     totalPrice,
   };
 };
+
+export async function getOrderById(orderId: string): Promise<IOrder> {
+  await connectToDatabase()
+  const order = await Order.findById(orderId)
+  return JSON.parse(JSON.stringify(order))
+}
