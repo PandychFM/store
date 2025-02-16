@@ -34,7 +34,7 @@ export default function OrderDetailsForm({
     totalPrice,
     paymentMethod,
     isPaid,
-    paidAt,
+    // paidAt,
     isDelivered,
     deliveredAt,
     expectedDeliveryDate,
@@ -75,11 +75,14 @@ export default function OrderDetailsForm({
           <CardContent className="p-4 gap-4">
             <h2 className="text-xl pb-4">Способ оплаты</h2>
             <p>{paymentMethod}</p>
-            {isPaid ? (
-              <Badge>Оплачено по {formatDateTime(paidAt!).dateTime}</Badge>
+            {/* {isPaid ? (
+              
             ) : (
               <Badge variant="destructive">Не оплачено</Badge>
-            )}
+            )} */}
+            <Badge>Оплачено 
+              {/* по {formatDateTime(paidAt!).dateTime} */}
+              </Badge>
           </CardContent>
         </Card>
         <Card>
