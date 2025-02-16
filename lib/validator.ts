@@ -196,3 +196,6 @@ export const UserSignUpSchema = UserSignInSchema.extend({
   message: "Пароли не совпадают",
   path: ["confirmPassword"],
 });
+export const UserNameSchema = z.object({
+  name: UserName,
+})
