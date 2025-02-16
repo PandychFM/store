@@ -15,6 +15,19 @@ const Price = (field: string) =>
     }
   );
 
+  export const ReviewInputSchema = z.object({
+    product: MongoId,
+    user: MongoId,
+    isVerifiedPurchase: z.boolean(),
+    title: z.string().min(1, 'Требуется название'),
+    comment: z.string().min(1, 'Комментарий обязателен'),
+    rating: z.coerce
+      .number()
+      .int()
+      .min(1, 'Рейтинг должен быть не менее 1')
+      .max(5, 'Рейтинг должен быть не менее 5'),
+  })
+
 export const ProductInputSchema = z.object({
   name: z.string().min(3, "Имя должно содержать не менее 3 символов"),
   slug: z.string().min(3, "Слог должен содержать не менее 3 символов"),
@@ -45,7 +58,7 @@ export const ProductInputSchema = z.object({
   ratingDistribution: z
     .array(z.object({ rating: z.number(), count: z.number() }))
     .max(5),
-  reviews: z.array(z.string()).default([]),
+  reviews: z.array(ReviewInputSchema).default([]),
   numSales: z.coerce
     .number()
     .int()

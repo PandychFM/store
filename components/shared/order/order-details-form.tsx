@@ -159,7 +159,7 @@ export default function OrderDetailsForm({
                 className={cn(buttonVariants(), "w-full")}
                 href={`/checkout/${order._id}`}
               >
-                Заплатить\
+                Заплатить
               </Link>
             )}
 
